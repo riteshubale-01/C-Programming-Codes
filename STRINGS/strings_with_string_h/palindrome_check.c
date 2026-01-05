@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100], rev[100];
+
+    // fgets(str, sizeof(str), stdin);
+    scanf(" %[^\n]", str);
+
+    strcpy(rev, str);
+    strrev(rev);   // works in most compilers
+
+    if (strcmp(str, rev) == 0)
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
+
+    return 0;
+}
